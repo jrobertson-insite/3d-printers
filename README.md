@@ -1,22 +1,27 @@
 # Addons and configuration for 3D printers
 
+#### Installation Tutorial Video here: https://youtu.be/cAxEIdThDiQ 
 
 #### Anycubic i3 mega S Klipper fast printing (first layer on 200 mm/s speed): https://youtu.be/GtIsCP1_Cyg 
 
 ### [Klipper configuration file for Anycubic i3 mega S](https://github.com/widapro/3d-printers/blob/master/anycubic-i3-mega-s/klipper/printer.cfg)
 This config file contains settings of all printer pins (steppers, sensors) for Anycubic i3 mega S in the factory configuration
 
+### Anycubic Mega S with TMC2208 stepper drivers with stock wire orientation (https://github.com/JJShankels/3d-printers/JJ_Anycubic_Mega_S_TMC2208_Klipper_printer.cfg)
+This contains code for 3D Touch or manual mesh
 
+### Install tested with FluiddPi (https://github.com/cadriel/FluiddPI)
 
 Klipper firmware should be compiled for the **atmega2560**
 
  Config file includes
-  - Configuration for **original** or **2208(2209)**, rotated by cabel, drivers
-  - Mesh bed leveling: **BLtouch** (3DTouch sensor from Triangelab)
+  - Configuration for **2208(2209)**, standard cable orientaion, drivers
+  - Mesh bed leveling: **BLtouch** (commented out)
   - **Manual meshed bed leveling** (commented out)
   - **'virtual_sdcard'** for fast printing without gaps
   - Beeper through **M300** gcode
   - Pause/Resume through **M600** for filament change
+  - **Start_Print/End_Print** g-code can be added to your slicer softwrae
 
  Home position is determined by 3DTouch. **Z limit switches are not used**.
 
