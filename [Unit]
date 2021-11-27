@@ -1,0 +1,15 @@
+[Unit]
+Description=KlipperScreen
+After=moonraker.service
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=pi
+WorkingDirectory=/home/pi/klippper_config
+ExecStart=/home/pi/klipper_config/lauch_klipperscreen.sh
+
+[Install]
+WantedBy=multi-user.target
